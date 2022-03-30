@@ -48,4 +48,4 @@ int SumOfElementsInOddPositions(int[] array)
 int[] randomArray = GetArrayOfRandomNumbers(4, 10);
 PrintArray(randomArray);
 int sumOfNumbersInOddPositions = SumOfElementsInOddPositions(randomArray);
-Console.Write($"Сумма элементов на нечётных позициях равна {sumOfNumbersInOddPositions}.");
+Console.Write($"Сумма элементов на нечётных позициях в массиве равна {sumOfNumbersInOddPositions}.");

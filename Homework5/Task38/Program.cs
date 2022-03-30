@@ -11,7 +11,6 @@ int[] GetArrayOfNumbers(int length, int deviation)
     return arrayOfNumbers;
 }
 
-
 int DifferenceBetweenMaxMinInArray(int[] array)
 {
     int maxMinDifference = 0;
@@ -52,6 +51,7 @@ void PrintArray(int[] array)
     }
     Console.WriteLine("]");
 }
+
 int[] realNumbers = GetArrayOfNumbers(4, 10);
 PrintArray(realNumbers);
 int maxMinDifference = DifferenceBetweenMaxMinInArray(realNumbers);
