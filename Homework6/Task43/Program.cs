@@ -4,7 +4,7 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 5,5)
 
 
 Console.Write("Введите коэффициент k1 для первого уравнения: ");
- double coefficientK1 = Convert.ToInt32(Console.ReadLine());
+double coefficientK1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите коэффициент b1 для первого уравнения: ");
 double coefficientB1 = Convert.ToInt32(Console.ReadLine());
 
