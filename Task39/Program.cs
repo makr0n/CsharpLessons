@@ -22,27 +22,31 @@ int[] RotateArray(int[] inputArray)
     return returningArray;
 }
 
-void PrintArray(int[] inputArray)
+string PrintArray(int[] inputArray)
 {
-    Console.Write("[");
+    string returnStr = "[";
     for (int i = 0; i < inputArray.Length; i++)
     {
-        
-        Console.Write(inputArray[i]);
+        returnStr += inputArray[i];
         if (i != inputArray.Length - 1)
         {
-            Console.Write(", ");
+            returnStr += ",";
         }
     }
-    Console.WriteLine("]");
+    returnStr += "]";
+    return returnStr;
 }
 
 int[] arrayToRotate = GenerateArray(10, 10);
 int[] rotatedArray = RotateArray(arrayToRotate);
 int[] rotatedRotatedArray = RotateArray(rotatedArray);
 Console.Write("Сгенерированный массив: ");
-PrintArray(arrayToRotate);
+string strArray = PrintArray(arrayToRotate);
+Console.Write("-----------------------------------");
 Console.Write("Перевернутый массив: ");
-PrintArray(rotatedArray);
+strArray = PrintArray(rotatedArray);
+Console.Write("-----------------------------------");
 Console.Write("Перевернутый еще раз массив: ");
-PrintArray(rotatedRotatedArray);
+strArray = PrintArray(rotatedRotatedArray);
+Console.Write(strArray);
+Console.Write("-----------------------------------");
