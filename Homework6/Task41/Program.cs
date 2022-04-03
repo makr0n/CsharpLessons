@@ -7,7 +7,7 @@ int count = 0;
 int enteredNumber = new int();
 
 Console.Write("Сколько чисел необходимо проверить? ");
-int amountOfNumbers= Convert.ToInt32(Console.ReadLine());
+int amountOfNumbers = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Вводите числа, после каждого введеного числа нажмите клавишу Enter");
 for (int i = 0; i < amountOfNumbers; i++)
