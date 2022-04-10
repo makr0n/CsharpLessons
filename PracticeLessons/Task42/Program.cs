@@ -15,5 +15,5 @@ string DecimalToBinary(int decimalNumber)
 }
 
 int number = 45;
-string binaryResult=DecimalToBinary(number);
+string binaryResult = DecimalToBinary(number);
 Console.WriteLine(binaryResult);
