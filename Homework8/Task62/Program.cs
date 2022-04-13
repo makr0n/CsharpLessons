@@ -4,15 +4,17 @@ int[,] GenerateSpiralMatrix(int rows, int columns)
 {
     int[,] matrix = new int[rows, columns];
     int numbers = 1;
-    int count = 0;
-    count = rows / 2;
-
-    for (int k = 0; k < count; k++)
+    int k = 0;
+    while (numbers < rows * columns)
     {
         for (int j = 0 + k; j < columns - k; j++)
         {
             matrix[0 + k, j] = numbers;
             numbers++;
+        }
+        if (numbers > rows * columns)
+        {
+            break;
         }
 
         for (int i = 1 + k; i < rows - k; i++)
@@ -20,11 +22,19 @@ int[,] GenerateSpiralMatrix(int rows, int columns)
             matrix[i, columns - k - 1] = numbers;
             numbers++;
         }
+        if (numbers > rows * columns)
+        {
+            break;
+        }
 
         for (int j = columns - 2 - k; j >= 0 + k; j--)
         {
             matrix[rows - k - 1, j] = numbers;
             numbers++;
+        }
+        if (numbers > rows * columns)
+        {
+            break;
         }
 
         for (int i = rows - 2 - k; i > 0 + k; i--)
@@ -32,7 +42,13 @@ int[,] GenerateSpiralMatrix(int rows, int columns)
             matrix[i, 0 + k] = numbers;
             numbers++;
         }
+        if (numbers > rows * columns)
+        {
+            break;
+        }
+        k++;
     }
+
     if (rows % 2 == 1 && columns % 2 == 1)                //условие для заполнения матрицы NxN, где N нечетное число
     {
         matrix[rows / 2, columns / 2] = rows * columns;
@@ -53,5 +69,5 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] rnd = GenerateSpiralMatrix(4, 4);
+int[,] rnd = GenerateSpiralMatrix(7, 8);
 PrintMatrix(rnd);
